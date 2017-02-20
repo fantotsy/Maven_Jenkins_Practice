@@ -8,6 +8,7 @@ public class SapAutoItTest {
 
     @Test
     public void testInputKeyInSapLogonFromFile() throws IOException {
+        System.out.println("PASSED_PARAMETER: " + PASSED_PARAMETER);
         Assert.assertEquals((int) Integer.valueOf(PASSED_PARAMETER), 2);
     }
 }
