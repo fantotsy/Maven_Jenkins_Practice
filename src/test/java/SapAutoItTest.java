@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class SapAutoItTest {
     private static final String PASSED_PARAMETER = System.getProperty("test.number");
-    private static final String FILE_PATH = System.getProperty("file.path");
+    private static final String FILE_PATH = System.getProperty("file.path") + "file.txt";
 
     @Test
     public void testInputKeyInSapLogonFromFile() throws IOException {
