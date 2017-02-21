@@ -29,6 +29,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <test.number>2</test.number>
+                        <file.path>default</file.path>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
