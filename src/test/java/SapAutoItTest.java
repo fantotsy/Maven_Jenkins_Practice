@@ -4,6 +4,9 @@ import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class SapAutoItTest {
     private static final String PASSED_PARAMETER = System.getProperty("test.number");
@@ -36,6 +39,15 @@ public class SapAutoItTest {
         }
 
         System.out.println("PASSED_PARAMETER: " + PASSED_PARAMETER);
+
+        try (Stream<String> stream = Files.lines(Paths.get("files/test/file.txt"))) {
+
+            stream.forEach(System.out::println);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Assert.assertEquals((int) Integer.valueOf(PASSED_PARAMETER), 2);
     }
 }
