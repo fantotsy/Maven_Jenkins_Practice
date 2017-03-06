@@ -38,7 +38,7 @@ public class SapAutoItTest {
             }
         }
 
-        System.out.println("PASSED_PARAMETER: " + PASSED_PARAMETER);
+        System.out.println("\u001B[31m" + "PASSED_PARAMETER: " + PASSED_PARAMETER + "\u001B[0m");
 
         try (Stream<String> stream = Files.lines(Paths.get("files/test/file.txt"))) {
 
