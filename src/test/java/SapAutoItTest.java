@@ -1,3 +1,4 @@
+import com.sun.prism.paint.Color;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,7 +39,7 @@ public class SapAutoItTest {
             }
         }
 
-        System.err.println("PASSED_PARAMETER: " + PASSED_PARAMETER);
+        System.out.println(Color.GREEN + "PASSED_PARAMETER: " + PASSED_PARAMETER);
 
         try (Stream<String> stream = Files.lines(Paths.get("files/test/file.txt"))) {
 
